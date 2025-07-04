@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Mechanicus - Warhammer 40K</title>
+    <style>
+        :root {
+            --primary-color: #2a3439;
+            --secondary-color: #5a3825;
+            --accent-color: #9e2a2a;
+            --text-color: #e0e0e0;
+            --highlight-color: #d4af37;
+            --tech-color: #00a0a0;
+        }
+        
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-image: url('https://example.com/mechanicus-bg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(42, 52, 57, 0.9);
+            border: 1px solid var(--accent-color);
+            box-shadow: 0 0 20px rgba(158, 42, 42, 0.3);
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 3px solid var(--accent-color);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color), var(--secondary-color));
+        }
+
+        h1 {
+            color: var(--highlight-color);
+            font-size: 2.8em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        h2 {
+            color: var(--tech-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: var(--highlight-color);
+            margin-top: 25px;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: rgba(31, 40, 45, 0.7);
+            border: 1px solid var(--secondary-color);
+        }
+
+        .feature-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            flex: 1;
+            min-width: 250px;
+            padding: 15px;
+            background-color: rgba(42, 52, 57, 0.8);
+            border: 1px solid var(--tech-color);
+            border-radius: 3px;
+        }
+
+        .feature h4 {
+            color: var(--tech-color);
+            margin-top: 0;
+            border-bottom: 1px dashed var(--tech-color);
+            padding-bottom: 10px;
+        }
+
+        code {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: var(--tech-color);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        pre {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-left: 3px solid var(--accent-color);
+            overflow-x: auto;
+        }
+
+        .tech-icon {
+            color: var(--tech-color);
+            margin-right: 8px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin: 10px 0;
+        }
+
+        .button:hover {
+            background-color: var(--highlight-color);
+            color: var(--primary-color);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top: 1px solid var(--accent-color);
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .feature {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+            <img src="https://www.pikpng.com/pngl/b/557-5572250_adeptus-mechanicus-by-stgene-d5ixfto-1-40k-adeptus.png" alt="Adeptus Mechanicus Logo" class="logo">
+            <h1>Sistema de Gestión de Bibliotecas Mechanicus</h1>
+            <p>Omnissiah vult. Todos los datos serán catalogados.</p>
+        </header>
+
+        <section class="section">
+            <h2>📜 Descripción del Proyecto</h2>
+            <p>Este sistema de gestión bibliotecaria ha sido diseñado para los archivos sagrados del Adeptus Mechanicus, permitiendo el registro y catalogación de todos los textos sagrados, manuales técnicos y grimorios heréticos que llegan a nuestras manos.</p>
+            <p>Desarrollado en Python puro, este sistema permite a los Tech-Priests gestionar el conocimiento sagrado con la eficiencia que demanda el Omnissiah.</p>
+            <a href="#" class="button">Descargar Código Máquina</a>
+        </section>
+
+        <section class="section">
+            <h2>⚙️ Características Principales</h2>
+            <div class="feature-box">
+                <div class="feature">
+                    <h4><span class="tech-icon">🔍</span> Registro de Tómicos</h4>
+                    <p>Inscribe nuevos volúmenes en los archivos sagrados con todos sus metadatos: título, autor, año de publicación y código de identificación único.</p>
+                </div>
+                <div class="feature">
+                    <h4><span class="tech-icon">🗑️</span> Purga de Datos</h4>
+                    <p>Elimina registros corruptos o textos heréticos de la base de datos mediante su código de identificación.</p>
+                </div>
+                <div class="feature">
+                    <h4><span class="tech-icon">🔎</span> Protocolos de Búsqueda</h4>
+                    <p>Localiza textos sagrados mediante búsquedas por título o autor, con filtros de eficiencia del 99.9%.</p>
+                </div>
+                <div class="feature">
+                    <h4><span class="tech-icon">📋</span> Listado Completo</h4>
+                    <p>Genera informes detallados de todo el conocimiento almacenado en formato estandarizado.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>💻 Requisitos Tecnológicos</h2>
+            <ul>
+                <li><strong>Python 3.8+</strong> - Lenguaje sagrado del Machine Spirit</li>
+                <li><strong>No se requieren bibliotecas externas</strong> - Pureza de código garantizada</li>
+                <li><strong>Sistema operativo compatible</strong> - Windows, Linux o MacOS (no se garantiza soporte para sistemas herejes)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>🚀 Instalación</h2>
+            <p>Para iniciar el sistema de gestión bibliotecaria Mechanicus:</p>
+            <pre><code># Clonar el repositorio sagrado
+git clone https://github.com/mechanicus/biblioteca-sacra.git
+
+# Acceder al directorio del proyecto
+cd biblioteca-sacra
+
+# Iniciar el sistema
+python main.py</code></pre>
+        </section>
+
+        <section class="section">
+            <h2>🛠️ Estructura del Código</h2>
+            <h3>Clase <code>Libro</code></h3>
+            <p>Representa cada tomo en los archivos, con sus atributos sagrados:</p>
+            <pre><code>class Libro:
+    def __init__(self, titulo: str, autor: str, año: int, id: int):
+        self.titulo = titulo  # Título sagrado
+        self.autor = autor    # Autor/Archivista
+        self.año = año        # Año de inscripción
+        self.id = id          # Código de identificación único</code></pre>
+
+            <h3>Clase <code>Biblioteca</code></h3>
+            <p>Contiene los protocolos para gestionar el conocimiento:</p>
+            <pre><code>class Biblioteca:
+    def __init__(self):
+        self.libros = []  # Base de datos de conocimiento
+
+    def añadir_libro(self, libro: Libro):
+        # Protocolo de inscripción
+        pass
+
+    def eliminar_libro(self, id: int):
+        # Protocolo de purga
+        pass
+
+    def buscar_libro(self, criterio: str):
+        # Protocolo de búsqueda
+        pass
+
+    def listar_libros(self):
+        # Protocolo de informe
+        pass</code></pre>
+        </section>
+
+        <section class="section">
+            <h2>📜 Código de Conducta Mechanicus</h2>
+            <p>Todos los Tech-Priests que contribuyan a este proyecto deben seguir los Principios Sagrados del Adeptus Mechanicus:</p>
+            <ol>
+                <li>El conocimiento es sagrado</li>
+                <li>La eficiencia es devoción</li>
+                <li>Mantén puro el código máquina</li>
+                <li>Reporta toda herejía de inmediato</li>
+            </ol>
+        </section>
+
+        <footer>
+            <p>Desarrollado por el Adeptus Mechanicus | Año 41.999 del Imperio</p>
+            <p>Omnissiah nos protege. La información es poder. Guarda este poder.</p>
+        </footer>
+    </div>
+</body>
+</html>
